@@ -35,7 +35,7 @@ exports.loginUser = async (req, res) => {
 
     const accessToken = jwt.sign(
       {
-        is: user._id,
+        id: user._id,
         isAdmin: user.isAdmin,
       },
       process.env.JWT_SEC,
